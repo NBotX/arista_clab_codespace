@@ -1,5 +1,6 @@
 # ContainerLab on Github Codespace
-
-Deploying your labs 
+```
+Deploying your labs
+<br>
 $ clab deploy -t topology.yaml 
-
+```
