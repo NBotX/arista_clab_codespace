@@ -10,7 +10,7 @@ mgmt:
 topology:
   kinds:
     arista_ceos:
-      image: "ceos:4.32.0F"
+      image: "latest"
   nodes:
     eos1:
       kind: arista_ceos
