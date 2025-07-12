@@ -5,7 +5,6 @@
   "containerEnv": {
     "ARISTA_TOKEN": "${localEnv:ARISTA_TOKEN}",
     "CEOS_LAB_VERSION": "4.34.0F",
-    "CONTAINERWSF": "${containerWorkspaceFolder}",
     "GITHUB_REPOSITORY": "${localEnv:GITHUB_REPOSITORY}"
   },
 
