@@ -3,7 +3,8 @@
   "image": "mcr.microsoft.com/devcontainers/python:3.12-bullseye",
 
   "containerEnv": {
-    "ARISTA_TOKEN": "${localEnv:ARISTA_TOKEN}"
+    "ARISTA_TOKEN": "${localEnv:ARISTA_TOKEN}",
+    "CEOS_LAB_VERSION": "4.32.0F"
   },
 
   "secrets": {

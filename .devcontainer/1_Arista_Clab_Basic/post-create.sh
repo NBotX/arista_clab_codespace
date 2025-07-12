@@ -5,6 +5,7 @@ set -e
 VENV_PATH="$HOME/.venv"
 SHELL_CONFIG_FILE="$HOME/.bashrc"
 DOWNLOAD_COMMAND="download-ceos"
+CEOS_VERSION="${CEOS_LAB_VERSION}"
 
 # --- Color Codes for Highlighting ---
 YELLOW='\033[1;33m'
@@ -74,7 +75,7 @@ automated_ceos_download() {
         file_pattern="cEOS-lab-*.tar.xz"
     fi
 
-    ardl --token "$ARISTA_TOKEN" get eos --format "$image_format" --latest
+    ardl --token "$ARISTA_TOKEN" get eos --format "$image_format" --version "$CEOS_VERSION"
 
     image_tar_xz=$(ls $file_pattern 2>/dev/null | head -n 1)
 
@@ -125,7 +126,7 @@ else
     pattern="cEOS-lab-*.tar.xz"
 fi
 
-ardl --token "\$ARISTA_TOKEN" get eos --format "\$format" --latest
+ardl --token "\$ARISTA_TOKEN" get eos --format "\$format" --version "$CEOS_VERSION"
 
 tar_file=\$(ls \$pattern 2>/dev/null | head -n 1)
 
