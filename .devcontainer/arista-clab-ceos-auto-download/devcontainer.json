@@ -3,9 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/python:3.12-bullseye",
 
   "containerEnv": {
-    "ARISTA_TOKEN": "${localEnv:ARISTA_TOKEN}",
-    "CEOS_LAB_VERSION": "4.34.0F",
-    "GITHUB_REPOSITORY": "${localEnv:GITHUB_REPOSITORY}"
+    "ARISTA_TOKEN": "${localEnv:ARISTA_TOKEN}"
   },
 
   "secrets": {
@@ -18,9 +16,7 @@
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
 
-  "postCreateCommand": "bash /workspaces/${localWorkspaceFolderBasename}/.devcontainer/arista-clab-ceos-auto-download/post-create.sh",
-  "workspaceMount": "source=${localWorkspaceFolder}/labs/1_arista_clab_basic,target=/workspace,type=bind",
-  "workspaceFolder": "/workspace",
+  "postCreateCommand": "bash .devcontainer/arista-clab-ceos-auto-download/post-create.sh",
 
   "customizations": {
     "vscode": {
@@ -29,7 +25,9 @@
         "workbench.startupEditor": "readme",
         "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor"
-      }
+      },
+      "extensions.ignoreRecommendations": true,
+      "extensions.showRecommendationsOnlyOnDemand": true
     },
       "extensions": [
         "ms-python.python",
