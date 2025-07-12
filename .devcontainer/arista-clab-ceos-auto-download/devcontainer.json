@@ -19,7 +19,7 @@
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
 
-  "postCreateCommand": "bash .devcontainer/arista-clab-ceos-auto-download/post-create.sh",
+  "postCreateCommand": "bash /workspaces/${localWorkspaceFolderBasename}/.devcontainer/post-create.sh",
   "workspaceMount": "source=${localWorkspaceFolder}/labs/1_arista_clab_basic/clab,target=/workspace,type=bind",
   "workspaceFolder": "/workspace",
 
