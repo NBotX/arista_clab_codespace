@@ -14,12 +14,12 @@ topology:
   nodes:
     eos1:
       kind: arista_ceos
-      startup-config: configs/eos1-startup-config
+      startup-config: init-configs/eos1-startup-config.cfg
       ports:
         - 8080:22
     eos2:
       kind: arista_ceos
-      startup-config: configs/eos2-startup-config
+      startup-config: init-configs/eos2-startup-config.cfg
       ports:
         - 8081:22
     netauto-box:
@@ -27,8 +27,8 @@ topology:
       ports:
         - 8082:22
       image: python:3.11-slim
-      binds:
-        #- scripts:/scripts
+      #binds:
+      #  - scripts:/scripts
       exec:
         - bash -c "pip install --default-timeout=100 -r scripts/requirements.txt"
 
@@ -43,4 +43,3 @@ topology:
 
   links:
     - endpoints: ["eos1:eth1", "eos2:eth1"]
-
