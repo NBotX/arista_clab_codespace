@@ -10,7 +10,7 @@ mgmt:
 topology:
   kinds:
     arista_ceos:
-      image: "latest"
+      image: "ceos:latest"
   nodes:
     eos1:
       kind: arista_ceos
@@ -28,7 +28,7 @@ topology:
         - 8082:22
       image: python:3.11-slim
       binds:
-        - scripts:/scripts
+        #- scripts:/scripts
       exec:
         - bash -c "pip install --default-timeout=100 -r scripts/requirements.txt"
 
