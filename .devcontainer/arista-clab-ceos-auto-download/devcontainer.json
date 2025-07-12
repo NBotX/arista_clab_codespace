@@ -19,11 +19,18 @@
   },
 
   "postCreateCommand": "bash /workspaces/${localWorkspaceFolderBasename}/.devcontainer/arista-clab-ceos-auto-download/post-create.sh",
-  "workspaceMount": "source=${localWorkspaceFolder}/labs/1_arista_clab_basic/clab,target=/workspace,type=bind",
+  "workspaceMount": "source=${localWorkspaceFolder}/labs/1_arista_clab_basic,target=/workspace,type=bind",
   "workspaceFolder": "/workspace",
 
   "customizations": {
     "vscode": {
+      "settings": {
+        "containerlab.showWelcomePage": false,
+        "workbench.startupEditor": "readme",
+        "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor"
+      }
+    },
       "extensions": [
         "ms-python.python",
         "redhat.ansible",
