@@ -1,5 +1,5 @@
 {
-  "name": "Arista Clab with cEoS Auto Download",
+  "name": "1_Arista_Clab_Basic_with_cEoS_Auto_Download",
   "image": "mcr.microsoft.com/devcontainers/python:3.12-bullseye",
 
   "containerEnv": {
@@ -8,7 +8,7 @@
 
   "secrets": {
     "ARISTA_TOKEN": {
-      "description": "Your Arista token to auto-download EOS images. Leave blank to skip."
+      "description": "Your Arista token to auto-download EOS images."
     }
   },
 
@@ -16,7 +16,7 @@
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
 
-  "postCreateCommand": "bash .devcontainer/arista-clab-ceos-auto-download/post-create.sh",
+  "postCreateCommand": "bash .devcontainer/1_Arista_Clab_Basic/post-create.sh",
 
   "customizations": {
     "vscode": {
@@ -26,8 +26,7 @@
         "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor"
       },
-      "extensions.ignoreRecommendations": true,
-      "extensions.showRecommendationsOnlyOnDemand": true
+      "extensions.ignoreRecommendations": true
     },
       "extensions": [
         "ms-python.python",
