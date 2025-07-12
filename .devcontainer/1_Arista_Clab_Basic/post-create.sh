@@ -37,7 +37,7 @@ setup_python_environment() {
     # shellcheck source=/dev/null
     source "$VENV_PATH/bin/activate"
     pip install --upgrade pip
-    pip install -r .devcontainer/arista-clab-ceos-auto-download/requirements.txt
+    pip install -r .devcontainer/1_Arista_Clab_Basic/requirements.txt
     deactivate
 }
 
